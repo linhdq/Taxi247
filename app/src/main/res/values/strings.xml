@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Taxi</string>
     <string name="app_version">Version 1.0</string>
+    <string name="phone_number">Phone number(*)</string>
+    <string name="user_name">User name</string>
+    <string name="email">Email</string>
+    <string name="referral_code">Referral code</string>
+    <string name="terms_and_conditions">I agree to Terms &amp; Conditions</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="english">English</string>
+    <string name="register">Register</string>
+    <string name="has_the_activation_code">HAS THE ACTIVATION CODE</string>
 </resources>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/register_background" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/layout_border"
+        android:padding="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/ic_call"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/edittext_height"
+            android:src="@drawable/ic_call"
+            android:tint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edt_phone_numbers"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_alignBaseline="@id/ic_call"
+            android:layout_toRightOf="@id/ic_call"
+            android:background="@color/transparent_100"
+            android:gravity="center_vertical"
+            android:hint="@string/phone_number"
+            android:inputType="number"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColorHint="@color/grey_500"
+            android:textColor="@color/grey_900"
+            android:textCursorDrawable="@drawable/custom_cursor_edittext" />
+
+        <View
+            android:id="@+id/line_call"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ic_call"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_500" />
+
+        <ImageView
+            android:id="@+id/ic_user"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_call"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_user"
+            android:tint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edt_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_call"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/ic_user"
+            android:background="@color/transparent_100"
+            android:gravity="center_vertical"
+            android:hint="@string/user_name"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColorHint="@color/grey_500"
+            android:textColor="@color/grey_900"
+            android:textCursorDrawable="@drawable/custom_cursor_edittext" />
+
+        <View
+            android:id="@+id/line_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ic_user"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_500" />
+
+        <ImageView
+            android:id="@+id/ic_email"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_user_name"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_mail"
+            android:tint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_user_name"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/ic_user"
+            android:background="@color/transparent_100"
+            android:gravity="center_vertical"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColorHint="@color/grey_500"
+            android:textColor="@color/grey_900"
+            android:textCursorDrawable="@drawable/custom_cursor_edittext" />
+
+        <View
+            android:id="@+id/line_email"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ic_email"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_500" />
+
+        <ImageView
+            android:id="@+id/ic_referral_code"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_email"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/ic_price_tag"
+            android:tint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/edt_referral_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_email"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/ic_user"
+            android:background="@color/transparent_100"
+            android:gravity="center_vertical"
+            android:hint="@string/referral_code"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:textColorHint="@color/grey_500"
+            android:textColor="@color/grey_900"
+            android:textCursorDrawable="@drawable/custom_cursor_edittext" />
+
+        <View
+            android:id="@+id/line_referral_code"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ic_referral_code"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_500" />
+
+        <ImageView
+            android:id="@+id/ic_check_box"
+            android:layout_width="@dimen/icon_width"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_referral_code"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_check_box"
+            android:tint="@color/colorPrimary" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/line_referral_code"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/ic_check_box"
+            android:gravity="center_vertical"
+            android:text="@string/terms_and_conditions"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/grey_900"
+            android:id="@+id/txt_term_and_conditions"
+            />
+        <ImageView
+            android:id="@+id/ic_vietnam_flag"
+            android:layout_width="@dimen/edittext_height"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/ic_check_box"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:src="@drawable/vietnam_flag"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edittext_height"
+            android:text="@string/vietnamese"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/teal_600"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_below="@id/ic_check_box"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/ic_vietnam_flag"
+            android:paddingLeft="@dimen/_5sdp"
+            android:id="@+id/txt_vietnamese"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edittext_height"
+            android:text="@string/english"
+            android:textSize="@dimen/_14sdp"
+            android:textColor="@color/teal_600"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_below="@id/ic_check_box"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_5sdp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/txt_english"
+            />
+        <ImageView
+            android:id="@+id/ic_english_flag"
+            android:layout_width="@dimen/edittext_height"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_below="@id/ic_check_box"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/english_flag"
+            android:layout_toLeftOf="@id/txt_english"
+            />
+    </RelativeLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="@string/has_the_activation_code"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button_activation_code"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_has_activation_code"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_16sdp"
+        android:textColor="@color/white"
+        android:background="@drawable/custom_button_register"
+        android:layout_above="@id/btn_has_activation_code"
+        android:id="@+id/btn_register"
+        />
+</RelativeLayout>

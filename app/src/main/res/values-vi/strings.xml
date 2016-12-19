@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Taxi</string>
+    <string name="app_version">Phiên bản 1.0</string>
+    <string name="phone_number">Số điện thoại(*)</string>
+    <string name="user_name">Tên của bạn</string>
+    <string name="email">Email</string>
+    <string name="referral_code">Mã giới thiệu</string>
+    <string name="terms_and_conditions">Tôi đồng ý với Điều khoản sử dụng</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="english">English</string>
+    <string name="register">Đăng ký</string>
+    <string name="has_the_activation_code">ĐÃ CÓ MÃ KÍCH HOẠT</string>
+</resources>
