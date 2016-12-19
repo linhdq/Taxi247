@@ -1,5 +1,7 @@
 package com.example.linhdq.taxi.utils;
 
+import android.util.Patterns;
+
 import java.text.Normalizer;
 import java.util.regex.Pattern;
 
@@ -24,6 +26,18 @@ public class StringUtil {
         }
 
         if (phone.trim().charAt(0) != '0') return false;
+        return true;
+    }
+
+    public static boolean validateEmail(String email) {
+        return Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+
+    public static boolean validateName(String name) {
+        if (name == null || name.toCharArray().length == 0) return false;
+        for (char c : name.toCharArray()) {
+            if (!Character.isLetter(c) && c != ' ') return false;
+        }
         return true;
     }
 }

@@ -11,4 +11,11 @@
     <string name="register">Register</string>
     <string name="has_the_activation_code">HAS THE ACTIVATION CODE</string>
     <string name="error_phone_number">Your phone number is invalid, please check it again!</string>
+    <string name="error_user_name">User name is invalid, please check it again!</string>
+    <string name="error_email">Your email is invalid, please check it again!</string>
+    <string name="enter_verification_code">Enter verification code</string>
+    <string name="verification_code">Verification code</string>
+    <string name="enter_verification_code_mess">A verification code has been sent to your number.</string>
+    <string name="confirm">Confirm</string>
+    <string name="re_send_sms">Re-send SMS after: </string>
 </resources>

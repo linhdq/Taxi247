@@ -29,15 +29,11 @@ public class Application extends android.app.Application {
         //get language code
         SharedPreferences sharedPreferences =
                 context.getSharedPreferences(Constant.SHARED_PREFERENCE_KEY, Context.MODE_PRIVATE);
-        String languageCode = sharedPreferences.getString(Constant.LANGUAGE_KEY,"vi");
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString(Constant.LANGUAGE_KEY,languageCode);
-        editor.commit();
-        //change language
-        Locale locale = new Locale(languageCode);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        context.getResources().updateConfiguration(config,context.getResources().getDisplayMetrics());
+        String languageCode = sharedPreferences.getString(Constant.LANGUAGE_KEY,null);
+        if(languageCode==null) {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString(Constant.LANGUAGE_KEY, "vi");
+            editor.commit();
+        }
     }
 }

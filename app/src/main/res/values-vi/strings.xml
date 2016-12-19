@@ -11,4 +11,11 @@
     <string name="register">Đăng ký</string>
     <string name="has_the_activation_code">ĐÃ CÓ MÃ KÍCH HOẠT</string>
     <string name="error_phone_number">Số điện thoại bạn nhập không đúng, xin vui lòng nhập lại!</string>
+    <string name="error_user_name">Tên bạn nhập không hợp lệ, xin vui lòng nhập lại!</string>
+    <string name="error_email">Địa chỉ email của bạn không hợp lệ, xin vui lòng nhập lại!</string>
+    <string name="enter_verification_code">Nhập mã kích hoạt</string>
+    <string name="verification_code">Mã kích hoạt</string>
+    <string name="enter_verification_code_mess">Mã kích hoạt tài khoản đã được gửi tới số điện thoại của bạn, xin vui lòng kiểm tra tin nhắn sms.</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="re_send_sms">Kích hoạt lại sau: </string>
 </resources>
