@@ -10,4 +10,5 @@
     <string name="english">English</string>
     <string name="register">Register</string>
     <string name="has_the_activation_code">HAS THE ACTIVATION CODE</string>
+    <string name="error_phone_number">Your phone number is invalid, please check it again!</string>
 </resources>

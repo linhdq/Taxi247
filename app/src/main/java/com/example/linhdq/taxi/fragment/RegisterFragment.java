@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.linhdq.taxi.R;
 import com.example.linhdq.taxi.activity.RegisterActivity;
@@ -154,6 +155,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         if (!StringUtil.validatePhoneNumber(edtPhoneNumber.getText().toString())) {
             edtPhoneNumber.setTextColor(getResources().getColor(R.color.red_600));
             edtPhoneNumber.setHintTextColor(getResources().getColor(R.color.red_600));
+            Toast.makeText(context,getResources().getString(R.string.error_phone_number),Toast.LENGTH_SHORT).show();
             return false;
         }
         return true;
