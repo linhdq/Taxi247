@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include layout="@layout/app_bar_home" />
+
+    <RelativeLayout
+        android:id="@+id/left_drawer"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/teal_600">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imv_avata"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/account"
+            app:civ_border_color="@color/white"
+            app:civ_border_width="2dp"
+            app:civ_fill_color="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imv_avata"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="@string/user_profile"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt_referral_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_profile"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:gravity="center"
+            android:text="Referral code: MXNK"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/_20sdp"
+            android:id="@+id/view_"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txt_referral_code"
+            />
+        <RelativeLayout
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/txt_referral_code"
+            android:layout_toLeftOf="@id/view_"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/layout_vietnam_flag"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/vietnam_flag"
+                android:padding="@dimen/_5sdp"
+                />
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/check_v"
+                android:layout_alignParentRight="true"
+                android:id="@+id/imv_check_vietnam"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@id/txt_referral_code"
+            android:layout_toRightOf="@id/view_"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/layout_english_flag"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/english_flag"
+                android:padding="@dimen/_5sdp"
+                />
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/check_v"
+                android:layout_alignParentRight="true"
+                android:id="@+id/imv_check_english"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="@string/app_version"
+            android:textSize="@dimen/_12sdp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:id="@+id/txt_app_version"
+            />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/list_item_drawer"
+            android:layout_below="@id/layout_vietnam_flag"
+            android:layout_above="@id/txt_app_version"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:dividerHeight="0.5dp"
+            android:divider="@color/grey_500"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:scrollbars="none"
+            />
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>

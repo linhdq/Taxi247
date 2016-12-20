@@ -12,4 +12,5 @@ public class Constant {
     public static String EMAIL = "email";
     public static String REFERRAL_CODE = "referral_code";
     public static String IS_AGREE = "is_agree";
+    public static String IS_LOGIN = "is_login";
 }

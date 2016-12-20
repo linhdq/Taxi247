@@ -300,7 +300,6 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     }
 
     private void changeLanguage() {
-        //
         Intent intent = new Intent(getActivity(), SplashScreenActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

@@ -1,6 +1,7 @@
 package com.example.linhdq.taxi.fragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -16,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.linhdq.taxi.R;
+import com.example.linhdq.taxi.activity.HomeActivity;
 import com.example.linhdq.taxi.activity.RegisterActivity;
 import com.example.linhdq.taxi.constant.Constant;
 
@@ -83,7 +85,7 @@ public class EnterVerificationCodeFragment extends Fragment implements View.OnCl
 
             @Override
             public void onTick(long l) {
-                btnReSendSMS.setText(getResources().getString(R.string.re_send_sms) + " 00:" + String.format("%02d:%02d", (l / 60000), (l % 60000)/1000));
+                btnReSendSMS.setText(getResources().getString(R.string.re_send_sms) + " 00:" + String.format("%02d:%02d", (l / 60000), (l % 60000) / 1000));
             }
 
             @Override
@@ -123,7 +125,14 @@ public class EnterVerificationCodeFragment extends Fragment implements View.OnCl
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_confirm:
-
+                //save status
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(Constant.IS_LOGIN, true);
+                editor.commit();
+                //
+                Intent intent = new Intent(context, HomeActivity.class);
+                startActivity(intent);
+                EnterVerificationCodeFragment.this.getActivity().finish();
                 break;
             case R.id.btn_re_send_sms:
 
