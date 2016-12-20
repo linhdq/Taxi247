@@ -53,6 +53,7 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     private Context context;
     //
     private SharedPreferences sharedPreferences;
+    private Toast toast;
     //
     private String languageCode;
     private String phoneNumber;
@@ -158,6 +159,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 userName = edtUserName.getText().toString().trim();
+                edtUserName.setTextColor(getResources().getColor(R.color.grey_900));
+                edtUserName.setHintTextColor(getResources().getColor(R.color.grey_500));
             }
 
             @Override
@@ -174,6 +177,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 email = edtEmail.getText().toString().trim();
+                edtEmail.setTextColor(getResources().getColor(R.color.grey_900));
+                edtEmail.setHintTextColor(getResources().getColor(R.color.grey_500));
             }
 
             @Override
@@ -250,25 +255,44 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         txtEnglish.setEnabled(isVietNam);
     }
 
-    private boolean dataValidation() {
+    private boolean phoneValidation(){
         //validate phone number
-        if (!StringUtil.validatePhoneNumber(edtPhoneNumber.getText().toString())) {
+        if (!StringUtil.validatePhoneNumber(phoneNumber)) {
             edtPhoneNumber.setTextColor(getResources().getColor(R.color.red_600));
             edtPhoneNumber.setHintTextColor(getResources().getColor(R.color.red_600));
-            Toast.makeText(context, getResources().getString(R.string.error_phone_number), Toast.LENGTH_SHORT).show();
+            if(phoneNumber==null || phoneNumber.trim().toCharArray().length==0){
+                toast.setText(getResources().getString(R.string.phone_number_is_required));
+            }else {
+                toast.setText(getResources().getString(R.string.error_phone_number));
+            }
+            toast.show();
             return false;
         }
+        return true;
+    }
+
+    private boolean usernameValidation(){
         //validate username if it is not null
         if (userName != null && userName.toCharArray().length != 0) {
             if (!StringUtil.validateName(userName)) {
-                Toast.makeText(context, getResources().getString(R.string.error_user_name), Toast.LENGTH_SHORT).show();
+                edtUserName.setTextColor(getResources().getColor(R.color.red_600));
+                edtUserName.setHintTextColor(getResources().getColor(R.color.red_600));
+                toast.setText(getResources().getString(R.string.error_user_name));
+                toast.show();
                 return false;
             }
         }
+        return true;
+    }
+
+    private boolean emailValidation(){
         //validate email if it is not null
         if (email != null && email.toCharArray().length != 0) {
             if (!StringUtil.validateEmail(email)) {
-                Toast.makeText(context, getResources().getString(R.string.error_email), Toast.LENGTH_SHORT).show();
+                edtEmail.setTextColor(getResources().getColor(R.color.red_600));
+                edtEmail.setHintTextColor(getResources().getColor(R.color.red_600));
+                toast.setText(getResources().getString(R.string.error_email));
+                toast.show();
                 return false;
             }
         }
@@ -285,15 +309,23 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
+        //reset toast
+        if(toast!=null){
+            toast.cancel();
+        }
+        toast=Toast.makeText(context,"",Toast.LENGTH_SHORT);
+        //
         switch (view.getId()) {
             case R.id.btn_register:
-                if (dataValidation()) {
+                if (phoneValidation() && usernameValidation() && emailValidation()) {
                     //do something
                     ((RegisterActivity) getActivity()).openFragment(new EnterVerificationCodeFragment(), true);
                 }
                 break;
             case R.id.btn_has_activation_code:
-                ((RegisterActivity) getActivity()).openFragment(new EnterVerificationCodeFragment(), true);
+                if(phoneValidation()) {
+                    ((RegisterActivity) getActivity()).openFragment(new EnterVerificationCodeFragment(), true);
+                }
                 break;
             case R.id.ic_check_box:
             case R.id.txt_term_and_conditions:

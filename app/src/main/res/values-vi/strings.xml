@@ -18,4 +18,13 @@
     <string name="enter_verification_code_mess">Mã kích hoạt tài khoản đã được gửi tới số điện thoại của bạn, xin vui lòng kiểm tra tin nhắn sms.</string>
     <string name="confirm">Xác nhận</string>
     <string name="re_send_sms">Kích hoạt lại sau: </string>
+    <string name="phone_number_is_required">Bạn chưa nhập số điện thoại.</string>
+    <string name="err_mess_has_actiovation_code">Số điện thoại đã thay đổi. Bạn vui lòng đăng ký lại.</string>
+    <string name="user_profile">Thông tin cá nhân</string>
+    <string name="taxi_booking">Đặt taxi</string>
+    <string name="history">Lịch sử</string>
+    <string name="promotion">Khuyến mại</string>
+    <string name="helps">Trợ giúp</string>
+    <string name="feedback">Góp ý</string>
+    <string name="about_us">Giới thiệu</string>
 </resources>
