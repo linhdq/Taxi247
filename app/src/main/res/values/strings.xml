@@ -31,6 +31,11 @@
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <string name="feedback_mess">We are looking forward to your feedback</string>
+    <string name="title">Title</string>
+    <string name="feedback_content">Content(*)</string>
+    <string name="send_feedback">Send</string>
+    <string name="hotline">Hotline</string>
+    <string name="send_feedback_result">Your feedback has been sent. Thank you!</string>
 </resources>

@@ -28,4 +28,9 @@
     <string name="feedback">Góp ý</string>
     <string name="about_us">Giới thiệu</string>
     <string name="logout">Đăng xuất</string>
+    <string name="feedback_mess">Chúng tôi mong muốn nhận được góp ý của bạn để ngày càng tốt hơn</string>
+    <string name="title">Tiêu đề</string>
+    <string name="feedback_content">Nội dung góp ý(*)</string>
+    <string name="send_feedback">Gửi góp ý</string>
+    <string name="send_feedback_result">Cảm ơn bạn đã gửi phản hồi cho chúng tôi!</string>
 </resources>

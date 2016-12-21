@@ -22,7 +22,6 @@ public class ListDrawerItemAdapter extends BaseAdapter {
     private Context context;
     private LayoutInflater inflater;
     private ObjectDrawerItem list[];
-    private View firstView;
 
     public ListDrawerItemAdapter(Context context, ObjectDrawerItem[] objects) {
         this.context = context;
@@ -57,16 +56,14 @@ public class ListDrawerItemAdapter extends BaseAdapter {
             ObjectDrawerItem obj = list[position];
             imvIcon.setImageResource(obj.getIcon());
             txtName.setText(obj.getName());
-            if (position == 0) {
+            if (obj.isSelected()) {
                 (view.findViewById(R.id.item_view)).setBackgroundColor(
                         context.getResources().getColor(R.color.orange_800));
-                firstView = view;
+            } else {
+                (view.findViewById(R.id.item_view)).setBackgroundColor(
+                        context.getResources().getColor(R.color.transparent_100));
             }
         }
         return view;
-    }
-
-    public View getFirstView() {
-        return firstView;
     }
 }
