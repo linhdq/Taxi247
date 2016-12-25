@@ -42,5 +42,8 @@
     <string name="promotion_code_mess">You do not have any promo code!</string>
     <string name="promotion_code">Promotion</string>
     <string name="promotion_news">News</string>
-
+    <string name="copyright">\u00a9 2017 Copyright by Chi Pheo Taxi</string>
+    <string name="content_about_us">Taxi là ứng dụng đặt Taxi trực tuyến của hãng Chí Phèo Taxi, chỉ cần một vài thao tác đơn giản để gọi một chiếc Taxi và có thể trực tiếp theo dõi quá trình chiếc Taxi đến đón bạn trên màn hình ứng dụng. Phần mềm sử dụng trên hệ điều hành iOS và Android được phát triển bởi Chí Phèo Taxi.\n\nChí Phèo Taxi là đơn vị vận tải hàng đầu trong lĩnh vực vận chuyển khách bằng Taxi tại Thủ đô Hà Nội với hơn 1000 xe và đội ngũ lái xe được đào tạo bài bản, chuyên nghiệp. Chí Phèo Taxi cam kết sẽ mang đến cho Quý khách hàng những dịch vụ hoàn hảo: tiện ích, nhanh chóng, an toàn và giá cước cạnh tranh.\n\nChí Phèo Taxi hân hạnh được phục vụ quý khách!</string>
+    <string name="rate_app">Rate app</string>
+    <string name="share">Share</string>
 </resources>

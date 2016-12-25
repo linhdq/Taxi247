@@ -20,6 +20,7 @@ import android.widget.RelativeLayout;
 import com.example.linhdq.taxi.R;
 import com.example.linhdq.taxi.adapter.ListDrawerItemAdapter;
 import com.example.linhdq.taxi.constant.Constant;
+import com.example.linhdq.taxi.fragment.AboutUsFragment;
 import com.example.linhdq.taxi.fragment.FeedbackFragment;
 import com.example.linhdq.taxi.fragment.PromotionContainerFragment;
 import com.example.linhdq.taxi.model.ObjectDrawerItem;
@@ -47,6 +48,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     //fragment
     private FeedbackFragment feedbackFragment;
     private PromotionContainerFragment promotionContainerFragment;
+    private AboutUsFragment aboutUsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -111,7 +113,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         listItem[3] = new ObjectDrawerItem(R.drawable.ic_help, getResources().getString(R.string.helps), false);
         listItem[4] = new ObjectDrawerItem(R.drawable.ic_mail, getResources().getString(R.string.feedback), false);
         listItem[5] = new ObjectDrawerItem(R.drawable.ic_about_us, getResources().getString(R.string.about_us), false);
-        listItem[6] = new ObjectDrawerItem(R.drawable.ic_logout, getResources().getString(R.string.logout), false);
+        listItem[6] = new ObjectDrawerItem(R.drawable.ic_signout, getResources().getString(R.string.logout), false);
         //
         itemIndex = 0;
         //adapter
@@ -123,6 +125,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         //fragment
         feedbackFragment = new FeedbackFragment();
         promotionContainerFragment = new PromotionContainerFragment();
+        aboutUsFragment = new AboutUsFragment();
     }
 
     private void addListener() {
@@ -154,7 +157,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         openFragment(feedbackFragment, false);
                         break;
                     case 5:
-
+                        openFragment(aboutUsFragment, false);
                         break;
                     case 6:
                         SharedPreferences.Editor editor = sharedPreferences.edit();
