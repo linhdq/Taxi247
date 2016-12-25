@@ -33,4 +33,8 @@
     <string name="feedback_content">Nội dung góp ý(*)</string>
     <string name="send_feedback">Gửi góp ý</string>
     <string name="send_feedback_result">Cảm ơn bạn đã gửi phản hồi cho chúng tôi!</string>
+    <string name="promotion_news_mess">Hiện tại không có tin khuyến mại nào!</string>
+    <string name="promotion_code_mess">Hiện tại bạn không có mã khuyến mại nào!</string>
+    <string name="promotion_code">Mã khuyến mại</string>
+    <string name="promotion_news">Tin khuyến mại</string>
 </resources>

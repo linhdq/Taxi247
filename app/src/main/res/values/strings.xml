@@ -38,4 +38,9 @@
     <string name="send_feedback">Send</string>
     <string name="hotline">Hotline</string>
     <string name="send_feedback_result">Your feedback has been sent. Thank you!</string>
+    <string name="promotion_news_mess">No available promotion!</string>
+    <string name="promotion_code_mess">You do not have any promo code!</string>
+    <string name="promotion_code">Promotion</string>
+    <string name="promotion_news">News</string>
+
 </resources>

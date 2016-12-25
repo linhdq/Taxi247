@@ -21,6 +21,7 @@ import com.example.linhdq.taxi.R;
 import com.example.linhdq.taxi.adapter.ListDrawerItemAdapter;
 import com.example.linhdq.taxi.constant.Constant;
 import com.example.linhdq.taxi.fragment.FeedbackFragment;
+import com.example.linhdq.taxi.fragment.PromotionContainerFragment;
 import com.example.linhdq.taxi.model.ObjectDrawerItem;
 
 import java.util.Locale;
@@ -45,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private byte itemIndex;
     //fragment
     private FeedbackFragment feedbackFragment;
+    private PromotionContainerFragment promotionContainerFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +122,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         languageCode = sharedPreferences.getString(Constant.LANGUAGE_KEY, "vi");
         //fragment
         feedbackFragment = new FeedbackFragment();
+        promotionContainerFragment = new PromotionContainerFragment();
     }
 
     private void addListener() {
@@ -129,7 +132,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 listItem[itemIndex].setSelected(false);
-                itemIndex= (byte) i;
+                itemIndex = (byte) i;
                 listItem[itemIndex].setSelected(true);
                 itemAdapter.notifyDataSetChanged();
                 setTitle(listItem[i].getName());
@@ -142,7 +145,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                         break;
                     case 2:
-
+                        openFragment(promotionContainerFragment, false);
                         break;
                     case 3:
 
