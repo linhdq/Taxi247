@@ -33,6 +33,7 @@ public class EnterVerificationCodeFragment extends Fragment implements View.OnCl
     private Button btnReSendSMS;
     //
     private String verificationCode;
+    private String phoneNumber;
     //
     private CountDownTimer countDownTimer;
     //
@@ -79,7 +80,12 @@ public class EnterVerificationCodeFragment extends Fragment implements View.OnCl
         //
         context = view.getContext();
         sharedPreferences = context.getSharedPreferences(Constant.SHARED_PREFERENCE_KEY, Context.MODE_PRIVATE);
-        txtPhoneNumber.setText(sharedPreferences.getString(Constant.PHONE_NUMBER, "Error"));
+        //get phone number from argument
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            phoneNumber = bundle.getString(Constant.PHONE_NUMBER);
+        }
+        txtPhoneNumber.setText(phoneNumber);
         //
         countDownTimer = new CountDownTimer(300000, 1000) {
 

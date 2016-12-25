@@ -21,7 +21,10 @@ import com.example.linhdq.taxi.R;
 import com.example.linhdq.taxi.adapter.ListDrawerItemAdapter;
 import com.example.linhdq.taxi.constant.Constant;
 import com.example.linhdq.taxi.fragment.AboutUsFragment;
+import com.example.linhdq.taxi.fragment.BookingFragment;
 import com.example.linhdq.taxi.fragment.FeedbackFragment;
+import com.example.linhdq.taxi.fragment.HelpFragment;
+import com.example.linhdq.taxi.fragment.HistoryFragment;
 import com.example.linhdq.taxi.fragment.PromotionContainerFragment;
 import com.example.linhdq.taxi.model.ObjectDrawerItem;
 
@@ -49,6 +52,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private FeedbackFragment feedbackFragment;
     private PromotionContainerFragment promotionContainerFragment;
     private AboutUsFragment aboutUsFragment;
+    private HelpFragment helpFragment;
+    private HistoryFragment historyFragment;
+    private BookingFragment bookingFragment;
+    private Fragment currentFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +100,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (currentFragment != bookingFragment) {
+                changeFragment(0);
+            } else {
+                super.onBackPressed();
+            }
         }
     }
 
@@ -126,6 +137,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         feedbackFragment = new FeedbackFragment();
         promotionContainerFragment = new PromotionContainerFragment();
         aboutUsFragment = new AboutUsFragment();
+        helpFragment = new HelpFragment();
+        historyFragment = new HistoryFragment();
+        bookingFragment = new BookingFragment();
+        currentFragment = bookingFragment;
+        //open default fragment
+        openFragment(currentFragment, false);
     }
 
     private void addListener() {
@@ -134,42 +151,47 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         drawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                listItem[itemIndex].setSelected(false);
-                itemIndex = (byte) i;
-                listItem[itemIndex].setSelected(true);
-                itemAdapter.notifyDataSetChanged();
-                setTitle(listItem[i].getName());
-                drawerLayout.closeDrawer(layoutDrawer);
-                switch (i) {
-                    case 0:
-
-                        break;
-                    case 1:
-
-                        break;
-                    case 2:
-                        openFragment(promotionContainerFragment, false);
-                        break;
-                    case 3:
-
-                        break;
-                    case 4:
-                        openFragment(feedbackFragment, false);
-                        break;
-                    case 5:
-                        openFragment(aboutUsFragment, false);
-                        break;
-                    case 6:
-                        SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putBoolean(Constant.IS_LOGIN, false);
-                        editor.commit();
-                        refreshActivity();
-                        break;
-                    default:
-                        break;
-                }
+                changeFragment(i);
             }
         });
+    }
+
+    private void changeFragment(int i) {
+        listItem[itemIndex].setSelected(false);
+        itemIndex = (byte) i;
+        listItem[itemIndex].setSelected(true);
+        itemAdapter.notifyDataSetChanged();
+        setTitle(listItem[i].getName());
+        drawerLayout.closeDrawer(layoutDrawer);
+        switch (i) {
+            case 0:
+                currentFragment = bookingFragment;
+                break;
+            case 1:
+                currentFragment = historyFragment;
+                break;
+            case 2:
+                currentFragment = promotionContainerFragment;
+                break;
+            case 3:
+                currentFragment = helpFragment;
+                break;
+            case 4:
+                currentFragment = feedbackFragment;
+                break;
+            case 5:
+                currentFragment = aboutUsFragment;
+                break;
+            case 6:
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(Constant.IS_LOGIN, false);
+                editor.commit();
+                refreshActivity();
+                break;
+            default:
+                break;
+        }
+        openFragment(currentFragment, false);
     }
 
     private void configLanguage() {

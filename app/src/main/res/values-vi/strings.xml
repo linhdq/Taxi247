@@ -41,4 +41,7 @@
     <string name="copyright">\u00a9 2017 Bản quyền thuộc Taxi Chí Phèo</string>
     <string name="rate_app">Đánh giá</string>
     <string name="share">Chia sẻ</string>
+    <string name="help_booking_instruction">Hướng dẫn đặt xe</string>
+    <string name="help_cancel_booking">Hướng dẫn huỷ chuyến đặt lịch</string>
+    <string name="history_mess">Bạn chưa có thông tin của chuyến đặt taxi nào</string>
 </resources>

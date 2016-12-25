@@ -61,6 +61,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
     private String email;
     private String referralCode;
     private boolean isAcceptTermConditions;
+    //fragment
+    private EnterVerificationCodeFragment verificationCodeFragment;
 
     @Nullable
     @Override
@@ -121,6 +123,8 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
         //
         sharedPreferences = context.getSharedPreferences(Constant.SHARED_PREFERENCE_KEY,
                 Context.MODE_PRIVATE);
+        //fragment
+        verificationCodeFragment=new EnterVerificationCodeFragment();
     }
 
     private void addListener() {
@@ -318,12 +322,18 @@ public class RegisterFragment extends Fragment implements View.OnClickListener {
             case R.id.btn_register:
                 if (phoneValidation() && usernameValidation() && emailValidation()) {
                     //do something
-                    ((RegisterActivity) getActivity()).openFragment(new EnterVerificationCodeFragment(), true);
+                    Bundle bundle=new Bundle();
+                    bundle.putString(Constant.PHONE_NUMBER, phoneNumber);
+                    verificationCodeFragment.setArguments(bundle);
+                    ((RegisterActivity) getActivity()).openFragment(verificationCodeFragment, true);
                 }
                 break;
             case R.id.btn_has_activation_code:
                 if(phoneValidation()) {
-                    ((RegisterActivity) getActivity()).openFragment(new EnterVerificationCodeFragment(), true);
+                    Bundle bundle=new Bundle();
+                    bundle.putString(Constant.PHONE_NUMBER, phoneNumber);
+                    verificationCodeFragment.setArguments(bundle);
+                    ((RegisterActivity) getActivity()).openFragment(verificationCodeFragment, true);
                 }
                 break;
             case R.id.ic_check_box:
