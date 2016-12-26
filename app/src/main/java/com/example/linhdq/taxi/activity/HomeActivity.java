@@ -100,7 +100,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            if (currentFragment != bookingFragment) {
+            if(getSupportFragmentManager().getBackStackEntryCount()!=0){
+                getSupportFragmentManager().popBackStack();
+            }else if (currentFragment != bookingFragment) {
                 changeFragment(0);
             } else {
                 super.onBackPressed();
@@ -142,7 +144,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         bookingFragment = new BookingFragment();
         currentFragment = bookingFragment;
         //open default fragment
-        openFragment(currentFragment, false);
+        openFragment(currentFragment, false, false);
     }
 
     private void addListener() {
@@ -191,7 +193,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
-        openFragment(currentFragment, false);
+        if(getSupportFragmentManager().getBackStackEntryCount()!=0){
+            getSupportFragmentManager().popBackStackImmediate();
+        }
+        openFragment(currentFragment, false, false);
     }
 
     private void configLanguage() {
@@ -232,11 +237,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void openFragment(Fragment fragment, boolean addToBackStack) {
+    public void openFragment(Fragment fragment, boolean addToBackStack, boolean hasAnimation) {
         if (!fragment.isAdded()) {
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-//            fragmentTransaction.setCustomAnimations(R.anim.trans_in, R.anim.trans_out,
-//                    R.anim.trans_back_in, R.anim.trans_back_out);
+            if (hasAnimation) {
+                fragmentTransaction.setCustomAnimations(R.anim.trans_in, R.anim.trans_out,
+                        R.anim.trans_back_in, R.anim.trans_back_out);
+            }
             fragmentTransaction.replace(R.id.layout_home_container, fragment);
             if (addToBackStack) {
                 fragmentTransaction.addToBackStack(fragment.toString());

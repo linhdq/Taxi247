@@ -49,4 +49,21 @@
     <string name="help_booking_instruction">Taxi booking instruction</string>
     <string name="help_cancel_booking">Cancel your schedule booking</string>
     <string name="history_mess">No taxi schedule recorded</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="help_reminder">- In case you have a schedule booking, app will display "Schedule booking" on the menu until it\'s expired or cancelled.\n\n- To cancel your booking, go to "History" function.</string>
+    <string name="help_your_schedule_booking">- A valid schedule booking will be placed on top on the list, with a blue "Schedule" status.\n\n- Select it to view details.</string>
+    <string name="help_cancel_schedule_booking">- Your booking information will be displayed.\n\n- You can cancel your booking by touch on "Cancel" button.</string>
+    <string name="reminder">Reminder</string>
+    <string name="your_schedule_booking">You schedule booking</string>
+    <string name="cancel_schedule_booking">Cancel schedule booking</string>
+    <string name="car_type_selection">Car tye selection</string>
+    <string name="help_car_type_selection">- You can change to another car type by touch on its icon. Selected car type will be highlighted.\n\n- In order to switch between "City" and "Airport" car type, simply touch on it or swipe left or right.</string>
+    <string name="choose_pickup_drop_off_point">Choose pick-up, drop-off point</string>
+    <string name="help_choose_pickup_drop_off_point">- Move the center point to your desired pick-up point. Then, touch on it to confirm. You can also change it by touch on its marker on the map.\n\n- Or you can use the search function by touch on the address frame.</string>
+    <string name="booking_confirmation">Booking Confirmation</string>
+    <string name="help_booking_confirmation">- Your booking confirmation will be presented on the screen. You can also:\n\n  + Change your booking time.\n\n  + Add promo code, if available.\n\n  + Send a addition note to your driver.\n\n- Finally, press "Book" to send your books to Taxi\'s system.</string>
+    <string name="driver_information">Driver\'s information</string>
+    <string name="help_driver_information">- Taxi will dispatch a driver that satisfy your request.\n\n- Your driver\'s information will be visible on screen. You can call him/her directly.\n\n- Your driver\'s location will be updated continuously. You can catch your taxi proactively.</string>
+    <string name="finish_booking">Finish booking</string>
+    <string name="help_finish_booking">- After get on your taxi, please press "Get on taxi" to let the driver knows that he/she get right person.\n\n- Finally, press "Finish" to give your rating and feedback for this driver.</string>
 </resources>

@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.example.linhdq.taxi.R;
+import com.example.linhdq.taxi.activity.HomeActivity;
 
 /**
  * Created by LinhDQ on 12/25/16.
@@ -21,6 +22,9 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
     private RelativeLayout itemCancelBooking;
     //
     private Context context;
+    //fragment
+    private HelpCancelBookingFragment helpCancelBookingFragment;
+    private HelpBookingInstructionFragment helpBookingInstructionFragment;
 
     @Nullable
     @Override
@@ -39,6 +43,9 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
         itemCancelBooking = (RelativeLayout) view.findViewById(R.id.layout_item_cancel_booking);
         //
         context = view.getContext();
+        //fragment
+        helpCancelBookingFragment = new HelpCancelBookingFragment();
+        helpBookingInstructionFragment = new HelpBookingInstructionFragment();
     }
 
     private void addListener() {
@@ -50,10 +57,10 @@ public class HelpFragment extends Fragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.layout_item_booking_instruction:
-
+                ((HomeActivity) getActivity()).openFragment(helpBookingInstructionFragment, true, true);
                 break;
             case R.id.layout_item_cancel_booking:
-
+                ((HomeActivity) getActivity()).openFragment(helpCancelBookingFragment, true, true);
                 break;
             default:
                 break;
