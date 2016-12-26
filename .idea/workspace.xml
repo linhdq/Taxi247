@@ -12,60 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8572af49-78e6-4124-804f-d9f0a10ef633" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_booking_instruction_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_booking_instruction_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_booking_instruction_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_booking_instruction_pic4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_booking_instruction_pic5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_cancel_booking_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_cancel_booking_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/child_help_cancel_booking_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/child_help_booking_instruction_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/child_help_booking_instruction_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/child_help_booking_instruction_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/child_help_booking_instruction_pic4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/child_help_booking_instruction_pic5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_booking_instruction_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_booking_instruction_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_booking_instruction_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_booking_instruction_pic4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_booking_instruction_pic5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_cancel_booking_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_cancel_booking_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xhdpi/child_help_cancel_booking_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_booking_instruction_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_booking_instruction_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_booking_instruction_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_booking_instruction_pic4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_booking_instruction_pic5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_cancel_booking_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_cancel_booking_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/child_help_cancel_booking_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_booking_instruction_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_booking_instruction_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_booking_instruction_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_booking_instruction_pic4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_booking_instruction_pic5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_cancel_booking_pic1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_cancel_booking_pic2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-xxxhdpi/child_help_cancel_booking_pic3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/adapter/ChildHelpPagerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/ChildHelpCancelBookingFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/HelpBookingInstructionFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/HelpCancelBookingFragment.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/model/ChildHelpModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/circle_tab_unselected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custom_button_in_footer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_tab_selected.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/circle_text_view.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_child_help.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_help_booking_instruction.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_help_cancel_booking.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/activity/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/activity/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/HelpFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/HelpFragment.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
@@ -100,11 +47,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="52" column="131" selection-start-line="52" selection-start-column="129" selection-end-line="52" selection-end-column="131" />
+            <state relative-caret-position="453">
+              <caret line="63" column="261" selection-start-line="63" selection-start-column="261" selection-end-line="63" selection-end-column="261" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="940">
+              <caret line="58" column="246" selection-start-line="58" selection-start-column="246" selection-end-line="58" selection-end-column="246" />
               <folding />
             </state>
           </provider>
@@ -150,7 +107,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/activity/HomeActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="693">
@@ -2002,12 +1959,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/BookingFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/RegisterFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/EnterVerificationCodeFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/circle_tab_selected.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/circle_tab_unselected.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/custom_button_in_footer.xml" />
         <option value="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_help_cancel_booking.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/adapter/ChildHelpCancelBookingPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/model/ChildHelpModel.java" />
@@ -2021,6 +1976,8 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/fragment/HelpBookingInstructionFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_child_help.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/linhdq/taxi/activity/HomeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
       </list>
     </option>
   </component>
@@ -2694,7 +2651,14 @@
       <option name="project" value="LOCAL" />
       <updated>1482679811425</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update Help function">
+      <created>1482743616180</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1482743616180</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2758,7 +2722,8 @@
     <MESSAGE value="add Promotion function" />
     <MESSAGE value="add About Us function" />
     <MESSAGE value="add Help, History function" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Help, History function" />
+    <MESSAGE value="update Help function" />
+    <option name="LAST_COMMIT_MESSAGE" value="update Help function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -3047,14 +3012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="980">
-          <caret line="49" column="164" selection-start-line="49" selection-start-column="164" selection-end-line="49" selection-end-column="164" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/circle_tab_selected.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -3085,14 +3042,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
           <caret line="651" column="131" selection-start-line="651" selection-start-column="128" selection-end-line="651" selection-end-column="130" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="52" column="131" selection-start-line="52" selection-start-column="129" selection-end-line="52" selection-end-column="131" />
           <folding />
         </state>
       </provider>
@@ -3264,6 +3213,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="196" column="64" selection-start-line="196" selection-start-column="64" selection-end-line="196" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-vi/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="940">
+          <caret line="58" column="246" selection-start-line="58" selection-start-column="246" selection-end-line="58" selection-end-column="246" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="63" column="261" selection-start-line="63" selection-start-column="261" selection-end-line="63" selection-end-column="261" />
           <folding />
         </state>
       </provider>
