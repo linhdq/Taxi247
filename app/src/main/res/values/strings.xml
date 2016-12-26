@@ -66,4 +66,20 @@
     <string name="help_driver_information">- Taxi will dispatch a driver that satisfy your request.\n\n- Your driver\'s information will be visible on screen. You can call him/her directly.\n\n- Your driver\'s location will be updated continuously. You can catch your taxi proactively.</string>
     <string name="finish_booking">Finish booking</string>
     <string name="help_finish_booking">- After get on your taxi, please press \"Get on taxi\" to let the driver knows that he/she get right person.\n\n- Finally, press \"Finish\" to give your rating and feedback for this driver.</string>
+    <string name="city">City</string>
+    <string name="airport">AirPort</string>
+    <string name="tccar">TCCar</string>
+    <string name="all">ALL</string>
+    <string name="any">Any</string>
+    <string name="_4_seats_small">4 SEATS-SMALL</string>
+    <string name="_5_seats">5 SEATS</string>
+    <string name="_7_seats">7 SEATS</string>
+    <string name="any_airport">any airport</string>
+    <string name="_4_seats_airport">4 seats-airport</string>
+    <string name="_7_seats_airport">7 seats-airport</string>
+    <string name="_4_seats">4 seats</string>
+    <string name="commencement_rate_up">Commencement rate up to </string>
+    <string name="fare_of_return_trip_with_distance">fare of return trip with distance >40km</string>
+
+
 </resources>

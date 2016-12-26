@@ -61,4 +61,18 @@
     <string name="help_driver_information">- Taxi sẽ tiến hành tìm kiếm lái xe gần nhất thoả mãn yêu cầu của bạn.\n\n- Thông tin lái xe đến đón sẽ được hiển thị trên màn hình. Bạn có thể gọi trực tiếp cho lái xe.\n\n- Vị trí của xe sẽ liên tục được cập nhật trên màn hình. Bạn có thể chủ động trong việc đón taxi hơn.</string>
     <string name="finish_booking">Hoàn thành chuyến đi</string>
     <string name="help_finish_booking">- Khi lái xe đã đón bạn, vui lòng bấm \"Gặp xe\" để lái xe xác nhận đã đón đúng bạn.\n\n- Lúc này, bạn có thể bấm \"Hoàn thành\" để nhận xét lái xe và kết thúc chuyến đi với Taxi.</string>
+    <string name="city">Nội thành</string>
+    <string name="airport">Sân bay</string>
+    <string name="tccar">TCCar</string>
+    <string name="all">tất cả</string>
+    <string name="any">bất kỳ</string>
+    <string name="_4_seats_small">4 chỗ nhỏ</string>
+    <string name="_5_seats">5 chỗ cao cấp</string>
+    <string name="_7_seats">7 chỗ</string>
+    <string name="any_airport">sân bay bất kỳ</string>
+    <string name="_4_seats_airport">4 chỗ sân bay</string>
+    <string name="_7_seats_airport">7 chỗ sân bay</string>
+    <string name="_4_seats">4 chỗ</string>
+    <string name="commencement_rate_up">Giá mở cửa </string>
+    <string name="fare_of_return_trip_with_distance">cước chiều về với cuốc chiều đi trên 40km</string>
 </resources>

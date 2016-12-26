@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view_car_type"
+        />
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_arrow_left"
+        android:layout_centerVertical="true"
+        android:tint="@color/grey_500"
+        android:id="@+id/imv_arrow_left"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/ic_arrow_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:tint="@color/grey_500"
+        android:id="@+id/imv_arrow_right"
+        android:visibility="gone"
+        />
+</RelativeLayout>

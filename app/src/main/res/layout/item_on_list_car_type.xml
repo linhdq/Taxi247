@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_90sdp"
+    android:layout_height="@dimen/_70sdp"
+    android:orientation="vertical"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:id="@+id/layout_item_car_type"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6"
+        android:src="@drawable/car1"
+        android:id="@+id/imv_car"
+        android:paddingTop="@dimen/_5sdp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:text="@string/_4_seats"
+        android:gravity="center"
+        android:textSize="@dimen/_10sdp"
+        android:textAllCaps="true"
+        android:textColor="@color/grey_700"
+        android:id="@+id/txt_car_type"
+        />
+</LinearLayout>
