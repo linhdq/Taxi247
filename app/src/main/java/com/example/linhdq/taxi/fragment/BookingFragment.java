@@ -1,9 +1,12 @@
 package com.example.linhdq.taxi.fragment;
 
+import android.Manifest;
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
@@ -18,13 +21,16 @@ import com.example.linhdq.taxi.R;
 import com.example.linhdq.taxi.adapter.CarTypePagerAdapter;
 import com.example.linhdq.taxi.interf.OnItemSelectedRecyclerView;
 import com.example.linhdq.taxi.model.CarTypeModel;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 /**
  * Created by LinhDQ on 12/25/16.
  */
 
-public class BookingFragment extends Fragment implements View.OnClickListener, OnItemSelectedRecyclerView {
+public class BookingFragment extends Fragment implements View.OnClickListener, OnItemSelectedRecyclerView, OnMapReadyCallback {
     //view
     private TextView listTab[];
     private ViewPager viewPagerCarType;
@@ -33,6 +39,7 @@ public class BookingFragment extends Fragment implements View.OnClickListener, O
     private Context context;
     //map
     private SupportMapFragment mapFragment;
+    private GoogleMap googleMap;
     //
     private int currentPageIndex;
     private boolean isShowPrice;
@@ -151,6 +158,7 @@ public class BookingFragment extends Fragment implements View.OnClickListener, O
 
     private void initMap() {
         mapFragment = SupportMapFragment.newInstance();
+        mapFragment.getMapAsync(this);
         FragmentTransaction fragmentTransaction =
                 getFragmentManager().beginTransaction();
         fragmentTransaction.add(R.id.google_map, mapFragment);
@@ -192,5 +200,23 @@ public class BookingFragment extends Fragment implements View.OnClickListener, O
             transLayoutBottomDown.start();
             isShowPrice = false;
         }
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        this.googleMap = googleMap;
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context,
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return;
+        }
+        googleMap.setMyLocationEnabled(true);
     }
 }
