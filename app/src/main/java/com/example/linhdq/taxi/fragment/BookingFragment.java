@@ -2,14 +2,23 @@ package com.example.linhdq.taxi.fragment;
 
 import android.Manifest;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,13 +33,19 @@ import com.example.linhdq.taxi.model.CarTypeModel;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by LinhDQ on 12/25/16.
  */
 
-public class BookingFragment extends Fragment implements View.OnClickListener, OnItemSelectedRecyclerView, OnMapReadyCallback {
+public class BookingFragment extends Fragment implements View.OnClickListener, OnItemSelectedRecyclerView, OnMapReadyCallback, GoogleMap.OnCameraIdleListener, GoogleMap.OnMyLocationButtonClickListener {
     //view
     private TextView listTab[];
     private ViewPager viewPagerCarType;
@@ -54,6 +69,12 @@ public class BookingFragment extends Fragment implements View.OnClickListener, O
     //aniamtion
     private ObjectAnimator transLayoutBottomDown;
     private ObjectAnimator transLayoutBottomUp;
+
+    //Location
+    private Marker marker;
+    private MarkerOptions markerOptions;
+    private LatLng currentPosition;
+    private String locationInformation;
 
 
     @Nullable
@@ -218,5 +239,75 @@ public class BookingFragment extends Fragment implements View.OnClickListener, O
             return;
         }
         googleMap.setMyLocationEnabled(true);
+        googleMap.setOnCameraIdleListener(this);
+        googleMap.setOnMyLocationButtonClickListener(this);
+//        currentPosition = googleMap.getCameraPosition().target;
+//        locationInformation = getLocationInfomation(context, currentPosition.latitude, currentPosition.longitude);
+//        markerOptions = new MarkerOptions().position(currentPosition).title(locationInformation);
+//        marker = googleMap.addMarker(markerOptions);
+//        marker.showInfoWindow();
     }
+
+    private String getLocationInfomation(Context context, double lat, double lng) {
+        Geocoder geocoder = new Geocoder(context, Locale.getDefault());
+        try {
+            List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+            String add = null;
+            if (addresses.size() > 0) {
+                Address obj = addresses.get(0);
+
+                add = obj.getAddressLine(0);
+            }
+            return add;
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    @Override
+    public void onCameraIdle() {
+//        Log.d("fucked", "fuck");
+//        if (marker != null) {
+//            marker.remove();
+//            currentPosition = googleMap.getCameraPosition().target;
+//            locationInformation = getLocationInfomation(context, currentPosition.latitude, currentPosition.longitude);
+//            markerOptions.position(currentPosition).title(locationInformation);
+//            marker = googleMap.addMarker(markerOptions);
+//            marker.showInfoWindow();
+//        }
+    }
+
+    private static void displayPromptForEnablingGPS(final Activity activity) {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(activity);
+        final String action = Settings.ACTION_LOCATION_SOURCE_SETTINGS;
+        final String message = "Do you want open GPS setting?";
+
+        builder.setMessage(message)
+                .setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface d, int id) {
+                                activity.startActivity(new Intent(action));
+                                d.dismiss();
+                            }
+                        })
+                .setNegativeButton("Cancel",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface d, int id) {
+                                d.cancel();
+                            }
+                        });
+        builder.create().show();
+    }
+
+    @Override
+    public boolean onMyLocationButtonClick() {
+        if (!((LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE)).isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            displayPromptForEnablingGPS(getActivity());
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
